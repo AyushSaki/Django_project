@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+
+<!--<h3>This is contact  us page !!!</h3>-->
+
+
+<!--{% if messages %}
+
+ {% for message in messages %}
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+
+{% endif %}
+ 
+
+{% comment %} Mera Code {% endcomment %}-->
+
+<!--{% if messages %}
+    {% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endfor %}
+
+    {% endif %}-->
+
+
+<div class="col-md-6 mx-auto">
+
+<!--<form method="post" action="/contact" enctype="multipart/form-data">-->
+
+<form method="post" action="{% url 'register' %}" enctype="multipart/form-data">
+
+
+
+      <!-- {% comment %} action ="{% url 'contact' %}" {% endcomment %} -->
+
+        {% csrf_token %}
+
+        <div class="container bg-dark p-2">
+
+        <h3 class="text-center text-white" style="letter-spacing:3px">REGISTRATION FORM</h3>
+
+
+        </div>
+
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name" name="name">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Lname</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your last name" name="lname">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Contact</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter your contact" name="contact">
+</div>
+
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Password</label>
+  <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="password">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+</div>
+
+<div class="mb-1">
+  <label class="form-label">Hobbies</label>
+
+</div>
+  
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="hobbies" value="read">
+  <label class="form-check-label" for="inlineCheckbox1">Read</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2"  name="hobbies" value="music">
+  <label class="form-check-label" for="inlineCheckbox2">Music</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2"  name="hobbies" value="travel">
+  <label class="form-check-label mb-2" for="inlineCheckbox2">Travel</label>
+</div>
+
+
+<div class="mb-1">
+  <label class="form-label">Gender</label>
+
+</div>
+  
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male">
+  <label class="form-check-label" for="inlineRadio1">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female">
+  <label class="form-check-label" for="inlineRadio2">Female</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="others">
+  <label class="form-check-label" for="inlineRadio2">Others</label>
+</div>
+
+
+<div class="mb-3">
+  <label for="dateInput" class="form-label">Select Date</label>
+  <input type="date" class="form-control" id="dateInput" name="date">
+</div>
+
+
+<div class="mb-3">
+  <label for="timeInput" class="form-label">Select Time</label>
+  <input type="time" class="form-control" id="timeInput" name="time">
+</div>
+
+
+<div class="mb-3">
+  <label for="fileInput" class="form-label">Upload File</label>
+  <input class="form-control" type="file" id="fileInput" name="fileupload">
+</div>
+
+
+
+<div class="d-flex justify-content-center"><button type="submit" class="btn btn-danger">Submit</button></div>
+
+</form>
+
+</div>
+
+{% endblock body %}
+
+
+    
+
+    
