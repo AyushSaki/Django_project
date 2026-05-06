@@ -1,0 +1,21 @@
+# 🔁 How to Reopen Django Project
+
+## 📂 Open project folder
+cd webpro
+
+## ⚙️ Activate virtual environment (if used)
+source venv/bin/activate
+
+## 🚀 Run server
+python manage.py runserver
+
+## 🌐 Open in browser
+http://127.0.0.1:8000/
+
+---
+
+## 🔐 Admin Login
+
+URL: http://127.0.0.1:8000/admin  
+Username: admin  
+Password: 123
